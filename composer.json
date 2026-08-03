@@ -1,0 +1,10 @@
+{
+    "require": {
+        "wp-plus/composer-autoload": "*"
+    },
+    "config": {
+        "allow-plugins": {
+            "wp-plus/composer-autoload": true
+        }
+    }
+}
