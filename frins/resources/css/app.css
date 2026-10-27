@@ -13,6 +13,76 @@
         'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
         'Noto Color Emoji';
 
+    --font-anime: 'Baloo 2', ui-rounded, system-ui, sans-serif;
+
+    --animate-float: float 6s ease-in-out infinite;
+    --animate-twinkle: twinkle 2.5s ease-in-out infinite;
+
+    @keyframes float {
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-10px);
+        }
+    }
+
+    @keyframes twinkle {
+        0%,
+        100% {
+            opacity: 0.25;
+            transform: scale(0.8);
+        }
+        50% {
+            opacity: 1;
+            transform: scale(1.15);
+        }
+    }
+
+    --animate-kenburns: kenburns 24s ease-in-out infinite alternate;
+    --animate-gradient: gradient 14s ease infinite;
+    --animate-petal: petal-fall 12s linear infinite;
+
+    @keyframes kenburns {
+        0% {
+            transform: scale(1) translate(0, 0);
+        }
+        100% {
+            transform: scale(1.12) translate(-1%, -1%);
+        }
+    }
+
+    @keyframes gradient {
+        0%,
+        100% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+    }
+
+    @keyframes petal-fall {
+        0% {
+            transform: translate3d(0, -10vh, 0) rotate(0deg);
+            opacity: 0;
+        }
+        10% {
+            opacity: 0.9;
+        }
+        50% {
+            transform: translate3d(24px, 50vh, 0) rotate(240deg);
+        }
+        90% {
+            opacity: 0.9;
+        }
+        100% {
+            transform: translate3d(-16px, 110vh, 0) rotate(480deg);
+            opacity: 0;
+        }
+    }
+
     --radius-lg: var(--radius);
     --radius-md: calc(var(--radius) - 2px);
     --radius-sm: calc(var(--radius) - 4px);
